@@ -6,10 +6,10 @@ function generateParantheses (n){
             return;
         }
         if (opencount < n) {
-            backtrack(opencount + 1, closecount, current + "(");
+            backtrack(opencount + 1, closecount, current );
         }
         if (closecount < opencount) {
-            backtrack(opencount, closecount + 1, current + ")");
+            backtrack(opencount, closecount + 1, current );
         }
     }
     backtrack(0, 0);
